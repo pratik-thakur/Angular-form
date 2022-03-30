@@ -1,0 +1,65 @@
+<div class="whole">
+  <div class="shadow-container">
+    <h4><dt>Sign Up Form</dt></h4>
+    <form #registerForm="ngForm" (ngSubmit)="register(registerForm.value)">
+      <div class="{{a}}">
+        <input
+          ngModel
+          (ngModelChange)="name($event,0)"
+          type="text"
+          class="{{b}} {{errors[0]?'redbox':''}}"
+          name="firstName"
+          placeholder="Enter first name"
+          required
+        />
+      </div>
+      <div class="{{a}}">
+        <input
+          ngModel
+          (ngModelChange)="name($event,1)"
+          type="text"
+          class="{{b}} {{errors[1]?'redbox':''}}"
+          name="lastName"
+          placeholder="Enter second name"
+          required
+        />
+      </div>
+      <div class="{{a}}">
+        <input
+          ngModel
+          (ngModelChange)="email($event)"
+          type="email"
+          class="{{b}} {{errors[2]?'redbox':''}}"
+          name="email"
+          placeholder="Enter email"
+          required
+        />
+      </div>
+      <div class="{{a}}">
+        <input
+          ngModel
+          (ngModelChange)="contact($event)"
+          type="number"
+          class="{{b}} {{errors[3]?'redbox':''}}"
+          name="contact"
+          placeholder="Enter contact number"
+          required
+        />
+      </div>
+      <div class="{{a}}">
+        <input
+          ngModel
+          (ngModelChange)="password($event)"
+          type="password"
+          class="{{b}} {{errors[4]?'redbox':''}}"
+          name="password"
+          placeholder="Password"
+          required
+        />
+      </div>
+      <div style="margin-top: 5px;"></div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <p>Already have an account?<a [routerLink]="['/login']">Login</a></p>
+  </div>
+</div>

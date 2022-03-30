@@ -1,0 +1,30 @@
+<div class="whole">
+  <div class="shadow-container">
+    <h4><dt>Login Form</dt></h4>
+    <form #loginForm="ngForm" (ngSubmit)="login(loginForm.value)">
+      <div class="{{a}}">
+        <input
+          ngModel
+          type="email"
+          (ngModelChange)="email($event)"
+          class="{{b}} {{errors[0]?'redbox':''}}"
+          name="email"
+          placeholder="Enter email"
+        />
+      </div>
+      <div class="{{a}}">
+        <input
+          ngModel
+          type="password"
+          (ngModelChange)="password($event)"
+          class="{{b}} {{errors[1]?'redbox':''}}"
+          name="password"
+          placeholder="Password"
+        />
+      </div>
+      <div style="margin-top: 5px;"></div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <p>Do not have an account?<a [routerLink]="['/register']">Sign Up</a></p>
+  </div>
+</div>

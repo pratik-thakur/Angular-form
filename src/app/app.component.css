@@ -1,0 +1,13 @@
+.navbar-brand {
+  margin-left: 10px;
+}
+.ms-auto {
+  margin-right: 10px;
+}
+
+.hide {
+  display: none;
+}
+.nav-item {
+  cursor: pointer;
+}
