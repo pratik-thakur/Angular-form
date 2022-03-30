@@ -21,7 +21,7 @@ export class RegisterComponent {
         return alert("You should resolve all errors first");
       }
     }
-    const url = "http://localhost:3000/user/register";
+    const url = "https://cryptic-island-95922.herokuapp.com/user/register";
     this.http.post(url, val).subscribe(
       (res) => {
         this.data = res;
